@@ -104,3 +104,59 @@ body{
     margin-top: 10px;
     display: none;
 }
+
+/* Existing styles... (keep them) */
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px;
+}
+
+.search input {
+    flex: 1 1 200px; /* Flex-grow and shrink with min size */
+    margin-right: 0; /* Remove fixed right margin */
+}
+
+.search button {
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Wrap humidity and wind stats */
+.details {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    .search input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .weather h1 {
+        font-size: 60px;
+    }
+
+    .weather h2 {
+        font-size: 35px;
+    }
+
+    .humidity, .wind {
+        font-size: 24px;
+    }
+}
